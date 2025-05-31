@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  social-support:
+    build:
+      context: ./social-support-docker
+    ports:
+      - "5001:5000"
+    env_file:
+      - ./social-support-docker/.env
+    volumes:
+      - ./credit-reports:/app/credit-reports:ro
+      - ./bank-statements:/app/bank-statements:ro
+
+  enablement-planner:
+    build:
+      context: ./social-enablement-docker
+    ports:
+      - "8001:8000"
+    env_file:
+      - ./social-enablement-docker/.env
+    volumes:
+      - ./resumes:/app/resumes:ro

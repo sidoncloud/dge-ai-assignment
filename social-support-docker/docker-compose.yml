@@ -1,0 +1,10 @@
+services:
+  social-support:
+    build: .
+    ports:
+      - "5001:5000"
+    env_file:
+      - .env
+    volumes:
+      - ../credit-reports:/app/credit-reports:ro
+      - ../bank-statements:/app/bank-statements:ro

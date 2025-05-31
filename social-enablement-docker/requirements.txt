@@ -1,0 +1,13 @@
+flask
+python-dotenv
+openai
+langgraph
+langgraph-supervisor
+langchain-tavily
+langchain[openai]
+langchain-chroma>=0.1.2
+langchain-community
+unstructured
+networkx
+pandas
+openpyxl
